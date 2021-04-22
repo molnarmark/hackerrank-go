@@ -26,23 +26,23 @@ func splitInput(input string) []int {
 	return data
 }
 
-func reverseInts(input []int) []int {
-	if len(input) == 0 {
-		return input
-	}
-	return append(reverseInts(input[1:]), input[0])
-}
-
 func main() {
 	reader := bufio.NewReaderSize(os.Stdin, 16*1024*1024)
-	readLine(reader)
-	nums := reverseInts(splitInput(readLine(reader)))
+	maxHeight := splitInput(readLine(reader))[1]
+	hurdles := splitInput(readLine(reader))
 
-	var strs []string
+	highest := 0
 
-	for _, num := range nums {
-		strs = append(strs, strconv.Itoa(num))
+	for _, hurdle := range hurdles {
+		if hurdle > highest {
+			highest = hurdle
+		}
 	}
 
-	fmt.Println(strings.Join(strs, " "))
+	if highest-maxHeight < 0 {
+		fmt.Println(0)
+		return
+	}
+
+	fmt.Println(highest - maxHeight)
 }
