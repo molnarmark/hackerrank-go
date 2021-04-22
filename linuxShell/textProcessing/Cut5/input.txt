@@ -1,0 +1,10 @@
+C.B - Cantonment Board/Cantonment
+C.M.C â€“ City Municipal Council
+C.T â€“ Census Town
+E.O â€“ Estate Office
+G.P - Gram Panchayat
+I.N.A â€“ Industrial Notified Area
+I.T.S - Industrial Township
+M â€“ Municipality
+M.B â€“ Municipal Board
+M.C â€“ Municipal Committee
